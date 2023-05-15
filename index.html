@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <title>crud system</title>
+    </head>
+
+    <body>
+
+        <section class="form w-50 m-auto mt-5 bg-white p-4 rounded shadow-lg">
+            <div class="container ">
+                <label class="pb-2" for="productName">productName : </label>
+                <input id="productName" type="text" name="producuName" placeholder="productName" class="form-control">
+                <div class="dangerName"></div>
+                <label class=" pb-2 mt-4" for="productName">productCategory :</label>
+                <input id="productCategory" type="text" name="productCategory" placeholder="productCategory"
+                    class="form-control">
+                <label class="pb-2 mt-4" for="productName">productPrice :</label>
+                <input id="productPrice" type="text" name="productPrice" placeholder="productPrice"
+                    class="form-control">
+                <label class="pb-2 mt-4" for="productDescription">productDescription :</label>
+                <textarea class="form-control py-5" name="productDescription" id="productDescription"></textarea>
+                <button id="add" onclick="addProduct()" class="btn btn-info text-white mt-4 px-3 py-2 ">Add</button>
+                <button id="update" onclick="newpro()" class="btn btn-warning text-white mt-4 px-3 py-2">update</button>
+            </div>
+        </section>
+        <input onkeyup="search()" id="search" type="search" placeholder="search for"
+            class="form-control  w-50 m-auto my-5 bg-white p-3 rounded shadow-lg">
+        <section class="data  w-50 m-auto mt-5 bg-white p-4 rounded shadow-lg">
+            <div class="container ">
+                <table class="table-striped table">
+                    <thead>
+                        <th>Item</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Delet</th>
+                        <th>Update</th>
+                    </thead>
+                    <tbody id="data">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
