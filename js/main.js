@@ -9,32 +9,32 @@ let update = document.getElementById("update")
 let arr = []
 
 // check if the localStorage is not empty or have a data
-    if (localStorage.getItem("products") != null) {
-        arr = JSON.parse(localStorage.getItem("products"))
-        loopForData()
+if (localStorage.getItem("products") != null) {
+    arr = JSON.parse(localStorage.getItem("products"))
+    loopForData()
 }
 
 // function that add the products in an object which added to an arry 
-function addProduct(){
-        let obj = {
-            Name: productName.value,
-            Category: productCategory.value,
-            Price: productPrice.value,
-            Description: productDescription.value
-        }
-        arr.push(obj)
-        localStorage.setItem("products", JSON.stringify(arr))
-        loopForData()
-        clearInputs()
+function addProduct() {
+    let obj = {
+        Name: productName.value,
+        Category: productCategory.value,
+        Price: productPrice.value,
+        Description: productDescription.value
     }
+    arr.push(obj)
+    localStorage.setItem("products", JSON.stringify(arr))
+    loopForData()
+    clearInputs()
+}
 
 // function that make loop for the arry that contains the products and added to the document
 function loopForData() {
     let cartona = ""
-    for (let i = - 0; i < arr.length; i++){
+    for (let i = - 0; i < arr.length; i++) {
         cartona += `
         <tr>
-            <td>${i+1}</td>
+            <td>${i + 1}</td>
             <td>${arr[i].Name}</td>
             <td>${arr[i].Category}</td>
             <td>${arr[i].Price}</td>
@@ -74,8 +74,8 @@ function search() {
         if (arr[i].Name.includes(searchinput)) {
             box += `
             <tr>
-            <td>${i+1}</td>
-            <td>${arr[i].Name.replace(searchinput,`<span id="name" class="text">${searchinput}<span/>`)}</td>
+            <td>${i + 1}</td>
+            <td>${arr[i].Name.replace(searchinput, `<span id="name" class="text">${searchinput}<span/>`)}</td>
             <td>${arr[i].Category}</td>
             <td>${arr[i].Price}</td>
             <td>${arr[i].Description}</td>
@@ -84,7 +84,7 @@ function search() {
         </tr>
             `
         }
-        
+
     }
     document.getElementById("data").innerHTML = box
 }
@@ -114,7 +114,7 @@ function newpro() {
     arr[index].Description = productDescription.value
 
     localStorage.setItem("products", JSON.stringify(arr))
-    
+
     loopForData()
 
     clearInputs()

@@ -12,44 +12,45 @@
     </head>
 
     <body>
+        <Main class="mainWidth">
+            <section class="form w-100 m-auto mt-5 bg-white p-4 rounded shadow-lg">
+                <div class="container ">
+                    <label class="pb-2" for="productName">Name : </label>
+                    <input id="productName" type="text" name="producuName" placeholder="Name" class="form-control">
+                    <div class="dangerName"></div>
+                    <label class=" pb-2 mt-4" for="productName">Category :</label>
+                    <input id="productCategory" type="text" name="productCategory" placeholder="Category"
+                        class="form-control">
+                    <label class="pb-2 mt-4" for="productName">Price :</label>
+                    <input id="productPrice" type="text" name="productPrice" placeholder="Price" class="form-control">
+                    <label class="pb-2 mt-4" for="productDescription">Description :</label>
+                    <textarea class="form-control py-5" name="productDescription" id="productDescription"></textarea>
+                    <button id="add" onclick="addProduct()" class="btn btn-info text-white mt-4 px-3 py-2 ">Add</button>
+                    <button id="update" onclick="newpro()"
+                        class="btn btn-warning text-white mt-4 px-3 py-2">update</button>
+                </div>
+            </section>
+            <input onkeyup="search()" id="search" type="search" placeholder="search for"
+                class="form-control  w-100 m-auto my-5 bg-white p-3 rounded shadow-lg">
+            <section class="data  w-100 m-auto mt-5 bg-white p-4 rounded shadow-lg">
+                <div class="container ">
+                    <table class="table-striped table">
+                        <thead>
+                            <th>Item</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Delet</th>
+                            <th>Update</th>
+                        </thead>
+                        <tbody id="data">
 
-        <section class="form w-50 m-auto mt-5 bg-white p-4 rounded shadow-lg">
-            <div class="container ">
-                <label class="pb-2" for="productName">productName : </label>
-                <input id="productName" type="text" name="producuName" placeholder="productName" class="form-control">
-                <div class="dangerName"></div>
-                <label class=" pb-2 mt-4" for="productName">productCategory :</label>
-                <input id="productCategory" type="text" name="productCategory" placeholder="productCategory"
-                    class="form-control">
-                <label class="pb-2 mt-4" for="productName">productPrice :</label>
-                <input id="productPrice" type="text" name="productPrice" placeholder="productPrice"
-                    class="form-control">
-                <label class="pb-2 mt-4" for="productDescription">productDescription :</label>
-                <textarea class="form-control py-5" name="productDescription" id="productDescription"></textarea>
-                <button id="add" onclick="addProduct()" class="btn btn-info text-white mt-4 px-3 py-2 ">Add</button>
-                <button id="update" onclick="newpro()" class="btn btn-warning text-white mt-4 px-3 py-2">update</button>
-            </div>
-        </section>
-        <input onkeyup="search()" id="search" type="search" placeholder="search for"
-            class="form-control  w-50 m-auto my-5 bg-white p-3 rounded shadow-lg">
-        <section class="data  w-50 m-auto mt-5 bg-white p-4 rounded shadow-lg">
-            <div class="container ">
-                <table class="table-striped table">
-                    <thead>
-                        <th>Item</th>
-                        <th>Name</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Delet</th>
-                        <th>Update</th>
-                    </thead>
-                    <tbody id="data">
-
-                    </tbody>
-                </table>
-            </div>
-        </section>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </Main>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>

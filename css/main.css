@@ -1,12 +1,24 @@
 body {
-    background-color: aqua;
+    background-color: black;
+}
+.mainWidth{
+    width: 85%;
+    margin: auto;
 }
 
+@media (max-width:767px) {
+    .mainWidth{
+        width: 100%;
+    }
+}
 .form .container input:focus,
 .form .container textarea:focus,
 #search {
     border-color: aqua !important;
     box-shadow: 0 0 0 0.25rem rgb(55, 225, 225);
+}
+.form .container .btn:first-of-type{
+    background-color: #205e58;
 }
 
 #name {
